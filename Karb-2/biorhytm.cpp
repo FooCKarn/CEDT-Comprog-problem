@@ -16,7 +16,6 @@ int main(){
     //cal day of 1st year
     if(yc1 % 400 == 0 ||(yc1%4==0&&yc1%100!=0)){ 
         sum += 366 - month1[m1-1] - d1;
-        cout<<"h"<<endl;
     }
     else{
         sum += 365 - month[m1-1] - d1;
@@ -25,12 +24,11 @@ int main(){
     y1++;
     sum += ((y2-y1)*365);
     //last year
-    if(yc2 % 400 == 0 ||(yc2%2==0&&yc2%100!=0)){ 
-        sum += month1[m2-1] + d2-1;
-        cout<<"h"<<endl;
+    if(yc2 % 400 == 0 ||(yc2%4==0&&yc2%100!=0)){ 
+        sum += month1[m2-1] + d2;
     }
     else{
-        sum+= month[m2-1] + d2-1;
+        sum+= month[m2-1] + d2;
     }
     double pi = M_PI;
     double a = sin((2*pi*sum)/23);
